@@ -1,0 +1,97 @@
++--------------------------------+
+|           Cliente              |
++--------------------------------+
+| - nome: string                |
+| - endereço: string            |
+| - informações de contato: ... |
+|                              |
+| + fazerPedido(): Pedido       |
++--------------------------------+
+             |
+             |
+             |
+             v
++--------------------------------+
+|           Pedido               |
++--------------------------------+
+| - cliente: Cliente            |
+| - itensPedido: ItemPedido[]   |
+| - status: string              |
+|                              |
+| + adicionarItem(): void      |
+| + removerItem(): void        |
+| + calcularTotal(): number     |
++--------------------------------+
+             |         |
+             |         |
+             |         |
+             v         v
++------------------+   +------------------+
+|   Produto        |   |    ItemPedido   |
++------------------+   +------------------+
+| - nome: string   |   | - produto: Produto |
+| - preço: number  |   | - quantidade: number|
+| - quantidade: int|   +------------------+
++------------------+
+             |
+             |
+             |
+             v
++--------------------------------+
+|    CarrinhoDeCompras           |
++--------------------------------+
+| - itensSelecionados: ItemPedido[] |
+|                                  |
+| + adicionarItem(): void        |
+| + removerItem(): void          |
+| + calcularTotal(): number       |
++--------------------------------+
+             |
+             |
+             |
+             v
++--------------------------------+
+|         Funcionário             |
++--------------------------------+
+| - nome: string                |
+| - cargo: string               |
+| - númeroFuncionario: int     |
+|                              |
+| + realizarVenda(): void      |
++--------------------------------+
+             |
+             |
+             |
+             v
++--------------------------------+
+|           Estoque               |
++--------------------------------+
+| - produtos: Produto[]         |
+|                              |
+| + adicionarProduto(): void   |
+| + removerProduto(): void     |
+| + atualizarQuantidade(): void|
++--------------------------------+
+             |
+             |
+             |
+             v
++--------------------------------+
+|           Caixa                 |
++--------------------------------+
+| - vendasRegistradas: Pedido[]  |
+|                              |
+| + registrarVenda(): void     |
+| + calcularTotalVendas(): number|
++--------------------------------+
+             |
+             |
+             |
+             v
++--------------------------------+
+|          Gerente                |
++--------------------------------+
+|                              |
+| + gerenciarEstoque(): void   |
+| + gerenciarPedidos(): void   |
++--------------------------------+

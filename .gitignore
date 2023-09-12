@@ -1,0 +1,14 @@
+# Arquivos gerados pelo TypeScript
+*.js
+*.js.map
+*.d.ts
+
+# Diretórios gerados pelo Node.js
+node_modules/
+
+# Arquivos gerados pelo sistema operacional ou editores de código
+.DS_Store
+Thumbs.db
+
+# Arquivos de configuração específicos do ambiente (exemplo: VS Code)
+.vscode/
